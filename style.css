@@ -1,0 +1,150 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+/* font-family: 'Overpass', sans-serif; */
+
+/* colors */
+:root {
+  --primary: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light: hsl(217, 12%, 63%);
+  --medium: hsl(216, 12%, 54%);
+  --dark: hsl(213, 19%, 18%);
+  --very-dark: hsl(216, 12%, 8%);
+  --circle-color: hsl(213, 19%, 23%);
+}
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--very-dark);
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  color: var(--white);
+}
+
+p {
+  color: var(--medium);
+  margin: 1rem 0;
+}
+
+/* general card styles */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--dark);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  min-height: 385px;
+  max-width: 450px;
+}
+
+/* feedback card */
+
+.icon {
+  padding: 1rem;
+  background-color: var(--circle-color);
+  border-radius: 100%;
+  margin: 1rem 0;
+}
+
+.form-group {
+  margin: 1.5rem 0;
+}
+
+.rating-group {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.rating-group input[type='radio'] {
+  /* hide radio button and use labels for custom button look w/ radio functionality */
+  position: absolute;
+  opacity: 0;
+}
+
+.rating-group input[type='radio'] + label {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--circle-color);
+  color: var(--light);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.rating-group input[type='radio']:hover + label,
+.rating-group input[type='radio']:focus + label {
+  background-color: var(--medium);
+  color: var(--white);
+}
+
+.rating-group input[type='radio']:checked + label {
+  background-color: var(--primary);
+}
+
+button {
+  width: 100%;
+  height: 2.5rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  color: var(--primary);
+  background-color: var(--white);
+}
+
+/* thank you card */
+
+#thank-you {
+  display: none;
+  text-align: center;
+}
+
+#thank-you img {
+  margin: 1.5rem auto;
+}
+
+.message {
+  background-color: var(--circle-color);
+  color: var(--primary);
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: 60%;
+  margin: 1.5rem auto;
+}
