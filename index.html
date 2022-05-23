@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="card" id="feedback">
+        <img src="images/icon-star.svg" alt="" class="icon" />
+        <h2>How did we do?</h2>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form id="rating-form">
+          <fieldset">
+            <ul class="rating-group">
+              <li>
+                <input type="radio" name="rating" value="1" id="rating-1" />
+                <label for="rating-1">1</label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="2" id="rating-2" />
+                <label for="rating-2">2</label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="3" id="rating-3" />
+                <label for="rating-3">3</label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="4" id="rating-4" />
+                <label for="rating-4">4</label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="5" id="rating-5" />
+                <label for="rating-5">5</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
 
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="card" id="thank-you">
+        <img src="images/illustration-thank-you.svg" alt="" />
+        <p class="message">You selected <span id="rating"></span> out of 5</p>
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
 </html>
